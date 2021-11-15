@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/*color*/
+$pink: rgb(249, 130, 150);
+$blue: rgb(47, 16, 255);
+$white: rgb(255, 255, 255);
+$Lblue: rgb(3, 3, 181);
+$Dblue: rgb(0, 0, 96);
+/*decoration*/
+$none: none;
+body {
+  background-image: url(../pic/dv.jpg);
+  background-position: center;
+  background-size: 100% 100vh;
+  text-align: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.row {
+  top: 3vh;
+  left: 14vh;
+  display: flex;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  width: 270px;
+  height: 350px;
+  box-shadow: 10px 10px 20px $Lblue;
+  background-image: url(../pic/m.jpg);
+  animation: slider 10s infinite linear;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 10% 10% 10% $pink;
+    transform: translateY(-5px);
+  }
+}
+@keyframes slider {
+  0% {
+    background-image: url(../pic/m.jpg);
+  }
+  25% {
+    background-image: url(../pic/mk.jpg);
+  }
+  45% {
+    background-image: url(../pic/si.jpg);
+  }
+  75% {
+    background-image: url(../pic/gi.jpg);
+  }
+}
+.title-contaner {
+  margin-top: 5rem;
+  font-size: 25px;
+  text-align: center;
+  color: $Dblue;
+  text-shadow: 4px 5px 10px$blue;
+  font-style: italic;
+  font-family: "Ubuntu", sans-serif;
+  .h1-contaner {
+    font-size: 25px;
+    color: $white;
+    text-shadow: $none;
+  }
+  p {
+    letter-spacing: 5px;
+    font-weight: bolder;
+    color: $white;
+    font-family: "Courier New", Courier, monospace;
+    text-shadow: $none;
+  }
+}
+.links {
+  margin-top: 50px;
+  button {
+    border: 2px solid $blue;
+    padding: 1px 8% 1px 8%;
+    border-radius: 20px;
+    background-color: transparent;
+    &:hover {
+      box-shadow: 5px 5px 5px $blue;
+      transform: translateY(-5px);
+    }
+    a {
+      color: $white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-style: italic;
+      font-size: 30px;
+      text-decoration: none;
+    }
+  }
+}
